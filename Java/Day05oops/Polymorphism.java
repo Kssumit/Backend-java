@@ -17,7 +17,7 @@ class Dog extends Animal{
 
 public class Polymorphism {
     public static void main(String[] args) {
-        
+        //upcasting
         Animal dog = new Dog();//run time polymorphism , dynamic method dispatch
         //but we can access only thos properties & behaviour which are in Animal class
         dog.sound();
