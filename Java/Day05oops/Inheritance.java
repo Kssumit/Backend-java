@@ -39,7 +39,7 @@ class Parent extends GrandParent{
         System.out.println("Parent constructor is called");
     }
 
-    public void show(){
+    public void show(){//method overriding
         System.out.println("parent");
     }
 }
@@ -49,7 +49,7 @@ class Child extends Parent{
         System.out.println("Child constructor is called");
     }
 
-        public void show(){
+        public void show(){//method overriding
         System.out.println("child");
     }
 }
