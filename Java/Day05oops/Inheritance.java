@@ -7,8 +7,10 @@ class GrandParent{
     private int age;
 
     private boolean superPower;
-
-    public GrandParent() {
+    //imp ye this keyword kiska hoga 
+    //see below humne sirf child ka object bana hai to ye this child ko point kr rha hoga ok so ye age bhi child ki hogi
+    public GrandParent(int age) {
+        this.age = age;
         superPower = false;
         System.out.println("Grand parent constructor is called");
     }
@@ -35,9 +37,17 @@ class GrandParent{
 }
 
 class Parent extends GrandParent{
-    public Parent(){
+    // public Parent(){
+    //     //super()  //if i write or not, java automatically insert default super() to call constructor of immediate parent class object
+    //     System.out.println("Parent constructor is called");
+    // }
+    public Parent(int age){
+        super(age);
         System.out.println("Parent constructor is called");
     }
+    // public Parent(int a){
+    //     System.out.println("Parent constructor is called");
+    // }
 
     public void show(){//method overriding
         System.out.println("parent");
@@ -45,7 +55,10 @@ class Parent extends GrandParent{
 }
 
 class Child extends Parent{
-    public Child(){
+    public Child(int age){
+        //super()  //if i write or not, java automatically insert default super() to call constructor of immediate parent class object
+        //if in parent constructor you write only paramterized constructor then child class default constructor shows error
+        super(age);
         System.out.println("Child constructor is called");
     }
 
@@ -59,7 +72,7 @@ class Child extends Parent{
 
 public class Inheritance {
     public static void main(String[] args) {
-        Child child = new Child();
+        Child child = new Child(10);
         child.setName("sumit");
         child.setAge(18);
         System.out.println(child.getAge() + " " + child.getName());
