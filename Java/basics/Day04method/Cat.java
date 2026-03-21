@@ -1,4 +1,4 @@
-package Java.basics.method;
+package Java.basics.Day04method;
 
 public class Cat {
     String name;
