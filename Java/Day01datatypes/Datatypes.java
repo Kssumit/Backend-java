@@ -1,4 +1,4 @@
-package Java.basics.Day01datatypes;
+package Java.Day01datatypes;
 class Datatypes{
     public static void main(String[] arr){
         //byte short int long

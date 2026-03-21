@@ -1,4 +1,4 @@
-package Java.basics.Day04array;
+package Java.Day04array;
 
 public class Array {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Java.basics.Day03string;
+package Java.Day03string;
 
 public class Test {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Java.basics.Day02operator.bitwise;
+package Java.Day02operator.bitwise;
 
 public class Operator {
     public static void main(String[] args) {

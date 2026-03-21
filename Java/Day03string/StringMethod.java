@@ -1,4 +1,4 @@
-package Java.basics.Day03string;
+package Java.Day03string;
 
 public class StringMethod {
     public static void main(String[] args) {
