@@ -1,0 +1,33 @@
+package Java.Day14multithreading.methods.runnable;
+
+public class NewThread implements Runnable {
+    @Override
+    public void run() {
+        for(int i = 0; i<5; i++){
+            System.out.println("Thread name =  " +Thread.currentThread().getName() + " " +i);
+            try{
+                Thread.sleep(2000);
+            }catch(InterruptedException e){
+                System.out.println(e);
+            }
+        }
+    }
+}
+
+class Test{
+    public static void main(String[] args) {
+        NewThread thread = new NewThread();
+        Thread t1 = new Thread(thread);
+        t1.start();
+
+
+        for(int i = 0; i<5; i++){
+            System.out.println("Thread name:  " + Thread.currentThread().getName() + " "+ i);
+            try{
+                Thread.sleep(1000);
+            }catch(InterruptedException e){
+                System.out.println(e);
+            }
+        }
+    }
+}
