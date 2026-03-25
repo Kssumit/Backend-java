@@ -1,4 +1,4 @@
-package Java.Day14multithreading.methods.thread;
+package Java.Day14multithreading.methodofcreatingthread.thread;
 
 public class MyThread extends Thread {
     @Override

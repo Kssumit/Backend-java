@@ -1,4 +1,4 @@
-package Java.Day14multithreading.methods.runnable;
+package Java.Day14multithreading.methodofcreatingthread.runnable;
 
 public class NewThread implements Runnable {
     @Override
