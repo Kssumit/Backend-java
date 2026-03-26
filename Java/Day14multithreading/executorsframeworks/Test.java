@@ -91,6 +91,7 @@ import java.util.concurrent.TimeUnit;
 public class Test{
     public static void main(String[] args) throws Exception{
         ExecutorService executor = Executors.newSingleThreadExecutor();
+        
         Future<Integer> future  = executor.submit(()->42);
         System.out.println(future.get());
         executor.shutdown();
@@ -112,4 +113,10 @@ public class Test{
     isme hum future.get() use kr skte hai but it don't give anything but we can use it for waiting
 
     future.isDone() aur is type ke method use kr skte hai
+*/
+
+/*
+    ExecutorService executor = Executors.newCachedThreadPool();
+    ye need ki isab se thread krte hai and terminated kr deta after 60sec of inactivity
+    // but there is  one problem it can create many thread bcz we are not specfying  
 */
