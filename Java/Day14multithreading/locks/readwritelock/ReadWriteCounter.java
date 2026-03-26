@@ -1,4 +1,4 @@
-package Java.Day14multithreading.readwritelock;
+package Java.Day14multithreading.locks.readwritelock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;

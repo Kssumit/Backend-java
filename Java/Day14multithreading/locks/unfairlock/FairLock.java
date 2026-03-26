@@ -1,4 +1,4 @@
-package Java.Day14multithreading.unfairlock;
+package Java.Day14multithreading.locks.unfairlock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
