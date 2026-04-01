@@ -13,20 +13,17 @@ public class MyThread extends Thread{
     }
     
     public static void main(String[] args) throws InterruptedException {
-        MyThread t1 = new MyThread();
+        MyThread t1 = new MyThread();//New
         System.out.println(t1.getState());
 
-        t1.start();
+        t1.start();//Runnable
         System.out.println(t1.getState());
 
-        Thread.sleep(1000);
+        Thread.sleep(1000);//blocked/waiting
+        System.out.println(t1.getState()); 
+
+        t1.join();//terminated
         System.out.println(t1.getState());
-
-        t1.join();
-        System.out.println(t1.getState());
-
-        
-
 
     }
 }

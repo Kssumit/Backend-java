@@ -122,5 +122,5 @@ public class MyThread extends Thread{
         mythread.start();
         System.out.println("main done");
     }
-    //ab t2 is not daemon thread so jvm will wait & infinte loop run
+    //ab t2 is not daemon thread so jvm will wait & infinte loop run 
 }
