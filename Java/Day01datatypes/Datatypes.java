@@ -1,4 +1,9 @@
 package Java.Day01datatypes;
+
+import java.math.BigInteger;
+import java.util.Random;
+import java.util.random.RandomGenerator;
+
 class Datatypes{
     public static void main(String[] arr){
         //byte short int long
@@ -16,5 +21,31 @@ class Datatypes{
         int x = ch;
         //maunally
         byte y = (byte) x;
+
+        RandomGenerator randomGenerator = RandomGenerator.getDefault();
+        System.out.println(randomGenerator.nextInt());
+
+        double nan = Double.NaN;
+        if(nan == Double.NaN) System.out.println("hello"); //it give false bcz every NaN is different from each each other
+        if(Double.isNaN(nan)) System.out.println("hello"); //it give true
+
+        var generator = new Random();
+        final int pi;
+        if(Double.isNaN(nan)){
+            pi = 8;
+        }else{
+            pi = 7;
+        }
+        
+        double ans = Math.floorMod(0-2,12);
+        System.out.println(ans);
+
+        BigInteger n = BigInteger.valueOf(1234567890);
+        var m = new BigInteger("12344567890");
+        System.out.println(n);
+        System.out.println(m);
+
+        BigInteger ans1 = BigInteger.valueOf(5).multiply(n.add(m));
+        System.out.println(ans1);
     }
 }

@@ -39,5 +39,6 @@ class Test{
         }
 
         System.out.println(monDay.getLower());
+        System.out.println(monDay.equals("Monday"));
     }
 }
