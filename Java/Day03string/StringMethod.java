@@ -1,5 +1,8 @@
 package Java.Day03string;
 
+import java.io.Console;
+import java.util.Scanner;
+
 public class StringMethod {
     public static void main(String[] args) {
         //String is immutable, all these methods create a new String 
@@ -52,5 +55,31 @@ public class StringMethod {
         
         String formattedStr = String.format("My age is %d and name is %s",16,"cheetah");
         System.out.println(formattedStr);
+
+        String greeting = "Hello world!";
+        String location = (String) greeting.subSequence(6,11);
+        System.out.println(location);
+
+        String first = "sumit";
+        String second = "shivani";
+        int val =  first.compareTo(second);
+
+        // var in = new Scanner(System.in);
+    //    if(in.hasNextInt()){
+    //     int age = in.nextInt();
+    //     System.out.println(age);
+    //    }
+
+    // Console terminal = System.console();
+    // String username = terminal.readLine("user name: ");
+    // char[] password = terminal.readPassword("password: ");
+    // for(char st: password){
+    //     System.out.print(st);
+    // }
+        int age = 14;
+    System.out.printf("Hello %s your age is %d",name, age);
+    String msg = "Hello %s your age is %d ".formatted(name,age);
+    System.out.println(msg);
+        
     }
 }
