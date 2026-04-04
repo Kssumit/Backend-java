@@ -27,6 +27,13 @@ public class Array {
             }
         }
 
+        int[] primes;
+        primes = new int[]{2,3,5,7};
+        
+        for (int i : primes) {
+            System.out.println(i);
+        }
+
 
     }
 }
