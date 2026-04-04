@@ -168,5 +168,29 @@ public class ArrayListExample {
                 //if 0 -> a & b are equal in ordering
             } 
         });
+
+        int[] num = {1,2,3,4};
+        ArrayList<String> name = new ArrayList<>();
+        name.add("peter");
+        name.add("peter1");
+        var names = new ArrayList<String>();
+        Arrays.fill(num,0);
+        for (int n : num) {
+            System.out.println(n);
+        }
+
+        System.out.println(Arrays.toString(num));
+        System.out.println(name.toString());
+        String temp = name.toString();
+        System.out.println(temp);
+
+        System.out.println(max(1, 1,2,3,4,5));
+        double[] numsss = {1,2,3,4,5,6,7,8};
+        System.out.println(max(0,numsss));
+    }
+
+    public static double max(double res, double... rest){
+        for(double v:rest) res = Math.max(res,v);
+        return res;
     }
 }
