@@ -1,5 +1,7 @@
 package Java.Day07static;
 
+import java.util.Random;
+
 //static
 /*
  1. static variable, block, method belongs to class not to object
@@ -18,8 +20,16 @@ public class School {
     }
 }
 
+class RandomNumber{
+    public static int nexInt(Random gen,int high, int low){
+        return low + gen.nextInt(high-low+1);
+    }
+}
+
 class Test{
     public static void main(String[] args) {
        System.out.println(School.add(4,5)); 
+       Random gen = new Random();
+        int num = RandomNumber.nexInt(gen, 3, 1);
     }
 }
