@@ -73,6 +73,7 @@ public class Invoice{
           newItem.q = q;
           newItem.unitP = p;
 
+          
           items.add(newItem);
     }
 }
