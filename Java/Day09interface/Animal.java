@@ -53,17 +53,65 @@ class Cat implements Animal{
     }
 }
 
-class Test{
-    public static void main(String[] args) {
-        Dog dog = new Dog();
-        Cat cat =  new Cat();
 
-        Animal.info();
-        dog.run();
-        cat.run();
+interface IntSequence{
+    boolean hasNext();
+    int next();
+}
 
-        System.out.println(Animal.max);
-        System.out.println(Dog.max);
-        System.out.println(Cat.max);
+class SquareSequence implements IntSequence{
+    private int i;
+
+    public boolean hasNext(){
+        return true;
+    }
+
+    public int next(){
+        i++;
+        return i*i;
     }
 }
+
+interface Dir{
+    int NORTH = 1;
+    int EAST = 2;
+} 
+
+class D implements Dir{
+    int c = NORTH;
+}
+
+class Test{
+    public static void main(String[] args) {
+        // Dog dog = new Dog();
+        // Cat cat =  new Cat();
+
+        // Animal.info();
+        // dog.run();
+        // cat.run();
+
+        // System.out.println(Animal.max);
+        // System.out.println(Dog.max);
+        // System.out.println(Cat.max);
+        SquareSequence obj = new SquareSequence();
+        IntSequence sequence = new SquareSequence();
+        SquareSequence squareSequence = (SquareSequence) sequence;
+        double avg = average(obj, 100);
+        System.out.println(avg);
+        System.out.println(Dir.NORTH);
+    }
+
+    public static double average(IntSequence seq, int n){
+        double sum = 0;
+        int count = 0;
+        while(seq.hasNext() && count<n){
+            sum+=seq.next();
+            count++;
+        }
+
+        return count==0 ? 0: sum/count;
+    }
+}
+
+
+
