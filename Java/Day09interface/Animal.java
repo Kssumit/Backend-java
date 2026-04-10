@@ -79,6 +79,7 @@ interface Dir{
 
 class D implements Dir{
     int c = NORTH;
+    
 }
 
 class Test{
