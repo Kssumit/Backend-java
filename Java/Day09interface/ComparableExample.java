@@ -44,6 +44,6 @@ public class ComparableExample{
 
         Collections.sort(list);
         System.out.print(list);
-
+        System.out.print(s1.compareTo(s2));
     }
 }
