@@ -16,18 +16,21 @@ public class NewThread implements Runnable {
 
 class Test{
     public static void main(String[] args) {
-        NewThread thread = new NewThread();
-        Thread t1 = new Thread(thread);
-        t1.start();
+        // NewThread thread = new NewThread();
+        // Thread t1 = new Thread(thread);
+        // t1.start();
 
 
-        for(int i = 0; i<5; i++){
-            System.out.println("Thread name:  " + Thread.currentThread().getName() + " "+ i);
-            try{
-                Thread.sleep(1000);
-            }catch(InterruptedException e){
-                System.out.println(e);
-            }
-        }
+        // for(int i = 0; i<5; i++){
+        //     System.out.println("Thread name:  " + Thread.currentThread().getName() + " "+ i);
+        //     try{
+        //         Thread.sleep(1000);
+        //     }catch(InterruptedException e){
+        //         System.out.println(e);
+        //     }
+        // }
+
+        Runnable task = new NewThread();
+        Thread.ofPlatform().start(task);
     }
 }
