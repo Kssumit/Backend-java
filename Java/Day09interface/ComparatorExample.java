@@ -11,9 +11,9 @@ class LengthCompare implements Comparator<String>{
 
 public class ComparatorExample {
     public static void main(String[] args) {
-        Comparator<String> LengthObj = new LengthCompare();
+
         String[] names = {"Harry","amit","sumit","cheetah"};
-        Arrays.sort(names,LengthObj);
+        Arrays.sort(names,(String a, String b)->a.length()-b.length());
         for(String n:names){System.out.println(n);}
     }    
 }

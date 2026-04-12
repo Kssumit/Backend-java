@@ -30,7 +30,10 @@ class Test{
         //     }
         // }
 
-        Runnable task = new NewThread();
+        // Runnable task = new NewThread();
+        // Thread.ofPlatform().start(task);
+
+        Runnable task = () -> {for(int i = 0; i<5; i++) System.out.println("hello");};
         Thread.ofPlatform().start(task);
     }
 }

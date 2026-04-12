@@ -1,5 +1,6 @@
 package Java.Day09interface;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -45,5 +46,11 @@ public class ComparableExample{
         Collections.sort(list);
         System.out.print(list);
         System.out.print(s1.compareTo(s2));
+
+        String[] names = {"sumit,Sumit","Amit","amit"};
+        Arrays.sort(names,String::compareToIgnoreCase);
+        for(String s:names){
+            System.out.println(s);
+        }
     }
 }
