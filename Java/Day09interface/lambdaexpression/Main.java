@@ -38,6 +38,7 @@ public class Main {
 
     public static Comparator<String> reverse(Comparator<String> comp){
         return (x,y)-> comp.compare(y,x);
+        
     }
 
 }
