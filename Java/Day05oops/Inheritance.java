@@ -116,6 +116,9 @@ public class Inheritance {
             }
         };
 
+
+        
+
         names.add(0,"sumit");
         names.add(1,"sumit");
         System.out.println(names);
