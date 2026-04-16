@@ -71,57 +71,80 @@ import java.util.ArrayList;
 
 
 
-class Employee{
-    private double salary = 10;
+// class Employee{
+//     private double salary = 10;
 
-    public void setSalary(double salary){
-        this.salary = salary;
-    }
-    public double getSalary(){
-        return salary;
-    }
-}
+//     public void setSalary(double salary){
+//         this.salary = salary;
+//     }
+//     public double getSalary(){
+//         return salary;
+//     }
+// }
 
-class Manager extends Employee{
-    private double bonus = 10;
+// class Manager extends Employee{
+//     private double bonus = 10;
 
-    public void setBonus(double bonus){
-        this.bonus = bonus;
-    }
+//     public void setBonus(double bonus){
+//         this.bonus = bonus;
+//     }
 
-    public double getSalary(){
-        return super.getSalary() + bonus;
-    }
-}
+//     public double getSalary(){
+//         return super.getSalary() + bonus;
+//     }
+// }
 
 //in overriding return can be different but parameter type must be same 
 
+
+class Worker{/
+    // public  void work(){
+    //     for(int i = 0; i<10;i++){
+    //         System.out.println("hello");
+    //     }
+    // }
+}
+
+class CurrentWorker extends Worker{
+    // public  void work(){
+    //     Thread.ofPlatform().start(super::work);
+    // }
+}
+
 public class Inheritance {
     public static void main(String[] args) {
-        Manager manager = new Manager();
-        Employee empl = manager;
-        // empl.setBonus();
-        Employee empl1 = new Employee();
-        System.out.println(manager.getSalary());
-        System.out.println(empl.getSalary());
-        System.out.println(empl1.getSalary());
-        if(empl instanceof Manager ){
-            ((Manager)empl).setBonus(10);
-        }
 
-        var names = new ArrayList<String>(100){
-            public void add(int index, String element){
-                super.add(index, element);
-                System.out.printf("Adding %s at index %d",element,index);
-            }
-        };
+        CurrentWorker currentWorker = new CurrentWorker();
+        currentWorker.work();
+
+
+
+
+
+        // Manager manager = new Manager();
+        // Employee empl = manager;
+        // // empl.setBonus();
+        // Employee empl1 = new Employee();
+        // System.out.println(manager.getSalary());
+        // System.out.println(empl.getSalary());
+        // System.out.println(empl1.getSalary());
+        // if(empl instanceof Manager ){
+        //     ((Manager)empl).setBonus(10);
+        // }
+
+        // var names = new ArrayList<String>(100){
+        //     public void add(int index, String element){
+        //         super.add(index, element);
+        //         System.out.printf("Adding %s at index %d",element,index);
+        //     }
+        // };
 
 
         
 
-        names.add(0,"sumit");
-        names.add(1,"sumit");
-        System.out.println(names);
+        // names.add(0,"sumit");
+        // names.add(1,"sumit");
+        // System.out.println(names);
         // Child child = new Child(10);
         // child.setName("sumit");
         // child.setAge(18);
