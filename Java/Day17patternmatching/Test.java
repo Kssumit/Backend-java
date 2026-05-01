@@ -10,7 +10,8 @@ public static void main(String[] args) {
     double slope = switch(p){
         case Point(var x, var y) -> y/x;
     };
-
+ 
+    
     System.out.println(slope);
 
 }    
