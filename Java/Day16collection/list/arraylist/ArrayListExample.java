@@ -190,7 +190,8 @@ public class ArrayListExample {
     }
 
     public static double max(double res, double... rest){
-        for(double v:rest) res = Math.max(res,v);
+        for(double v:rest) res = Math.max(res,v);  
+        
         return res;
     }
 }
